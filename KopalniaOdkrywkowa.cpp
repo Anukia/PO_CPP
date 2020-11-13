@@ -1,0 +1,1 @@
+#include "KopalniaOdkrywkowa.h"
