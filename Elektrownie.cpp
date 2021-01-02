@@ -1,8 +1,14 @@
 #include "Elektrownie.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
+
+Elektrownie::Elektrownie()
+{
+	//empty
+}
 
 Elektrownie::Elektrownie(string p_nazwa)
 {
@@ -25,6 +31,13 @@ void Elektrownie::wyswietl_informacje()
 		<< "Moc: " << moc << endl;
 }
 
+void Elektrownie::wyswietl_zapis(fstream &plik)
+{
+	plik << nazwa << endl
+		<< panstwo << endl
+		<< moc << endl;
+}
+
 void Elektrownie::mod_panstwo()
 {
 	string tmp;
@@ -43,6 +56,7 @@ void Elektrownie::mod_moc()
 
 void Elektrownie::modyfikuj()
 {
+	cout << "Wpisz wartosci dla pol ktore chcesz zmodyfikowac, pozostale zostaw puste (enter)" << endl;
 	mod_panstwo();
 	mod_moc();
 }

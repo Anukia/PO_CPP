@@ -8,13 +8,18 @@ class Gazowe :
 	public SurowcowNaturalnych
 {
 public:
-	Gazowe();
+	Gazowe(string p_nazwa);
+	Gazowe(string p_nazwa, string p_panstwo, float p_moc, string p_stan_skupienia, float p_v_komory);
 	void wyswietl_informacje();
+	void wyswietl_zapis(fstream &plik);
+	void modyfikuj();
 
 protected:
 	float v_komory_spalania;
 
+	void mod_v_komory();
+
 private:
-	bool czy_lisc;
+	static const bool czy_lisc = true;
 };
 

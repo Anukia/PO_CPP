@@ -8,9 +8,11 @@ class Elektrownie
 public:
 	string nazwa;
 
+	Elektrownie();
 	Elektrownie(string p_nazwa);
 	Elektrownie(string p_nazwa, string p_panstwo, float p_moc);
 	void wyswietl_informacje();
+	void wyswietl_zapis(fstream &plik);
 	void modyfikuj();
 
 protected:
@@ -21,6 +23,6 @@ protected:
 	void mod_moc();
 
 private:
-
+	static const bool czy_lisc = false;
 };
 
